@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}首页 - 电影推荐系统{% endblock %}
+
+{% block content %}
+    <h1>{{ username }}，欢迎来到电影评分系统！</h1>
+    <p>在这里你可以查看电影推荐、评分电影以及获取推荐结果。</p>
+    <hr>
+    <h3> Profile </h3>
+    <hr>
+    <p><b>User ID:</b> {{ userId }}</p>
+    <p><b>Username:</b> {{ username }}</p>
+    <p><b>Gender:</b> {{ gender }}</p>
+    <p><b>Age:</b> {{ age }}</p>
+    <hr>
+    <h2>已评分的电影</h2>
+    {% if rated_movies %}
+    <div class="container">
+        <div class="movie-grid">
+            {% for movie in rated_movies %}
+            <div class="movie-card">
+                {% if movie.image_url %}
+                <img src="{{ movie.image_url }}" alt="{{ movie.title }}" class="movie-image">
+                {% endif %}
+                <div class="movie-details">
+                    <div class="movie-title">{{ movie.title }}</div>
+                    <div class="movie-year">{{ movie.release_date }}</div>
+                    <div class="movie-genre">{{ movie.genre }}</div>
+                    <div class="movie-rating">Average Rating:{{ movie.movie_avg_rating }}</div>
+                    <div class="your-rating">Your Score: {{ movie.rating }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+        <p>你还没有评分任何电影。</p>
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,1 @@
+en,nb,ro,pl,cn,pt,sh,ko,uk,cs,sr,tr,de,is,ab,es,eu,el,it,af,te,ar,sv,nl,bn,hu,xx,ru,ml,th,fa,no,hi,bs,et,zh,fr,ja,id,la,da,fi,he

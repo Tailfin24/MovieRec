@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.message {
+    text-align: center;
+    color: red;
+}
+.gender-selection {
+    display: flex;
+    gap: 20px; /* 按钮之间的间距 */
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.gender-selection input[type="radio"] {
+    display: none; /* 隐藏原始单选按钮 */
+}
+
+.gender-selection label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 圆形按钮和文字之间的间距 */
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 自定义单选按钮 */
+.gender-selection label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999; /* 未选中时的边框颜色 */
+    border-radius: 50%;
+    background-color: #fff; /* 未选中时的背景色 */
+    transition: all 0.3s ease;
+}
+
+/* 单选按钮选中状态 */
+.gender-selection input[type="radio"]:checked + label::before {
+    border-color: #007bff; /* 选中时的边框颜色 */
+    background-color: #007bff; /* 选中时的背景色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+/* 为选中的按钮添加内部点 */
+.gender-selection input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 鼠标悬停时的效果 */
+.gender-selection label:hover::before {
+    border-color: #007bff;
+}

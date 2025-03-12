@@ -1,0 +1,6 @@
+argon2-cffi==23.1.0
+flask==3.0.3
+pyspark==3.5.3
+redis==5.2.0
+requests==2.22.0
+tensorflow==2.13.1
