@@ -152,14 +152,3 @@ redis.exceptions.ResponseError: wrong number of arguments for 'hset' command
 > - Redis 6.0 及更低版本：hset 只接受 key-value > 对的平铺参数，不支持 mapping 参数。
 > 你当前 Redis 服务器可能版本存在版本差异，导致代码中的参数不被接受。
 
-## 开发者与分工
-
-- 黄玮琦
-    - 项目整体框架设计与路线选择，数据处理与离线模型训练
-    - 完成贡献度 40%
-- 蔡慈芫
-    - 线上服务功能设计
-    - 完成贡献度 30%
-- 许秦玮
-    - 前端界面设计与交互
-    - 完成贡献度 30%
